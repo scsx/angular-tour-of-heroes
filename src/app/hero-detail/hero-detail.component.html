@@ -1,0 +1,14 @@
+<div *ngIf="hero; else other_content">
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+</div>
+
+<ng-template #other_content>
+  <h4 class="none">Select a hero</h4>
+</ng-template>
+
