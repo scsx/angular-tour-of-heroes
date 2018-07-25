@@ -12,7 +12,6 @@ import { HeroService } from '../hero.service';
 })
 
 export class HeroesComponent implements OnInit {
-  
   // wihout service
   // heroes = MOCKHEROES;
   // wih service
@@ -34,5 +33,8 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
         .subscribe(heroes => this.heroes = heroes);
   }
+
+  
+  
 
 }
