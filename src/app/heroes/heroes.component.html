@@ -3,13 +3,18 @@
     <td>
       <h2>My Heroes</h2>
       <ul class="heroes">
-        <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
-          <span class="badge">{{hero.id}}</span> {{hero.name}} - <small>pph: {{hero.price | currency:'EUR'}}</small>
+        <!-- Show beside -->
+        <!-- <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero"> -->
+        <!-- Link -->
+        <li *ngFor="let hero of heroes">
+          <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}} - <small>pph: {{hero.price | currency:'EUR'}}</small>
+          </a>
         </li>
       </ul>
     </td>
     <td class="det">
-      <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+      <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
     </td>
   </tr>
 </table>

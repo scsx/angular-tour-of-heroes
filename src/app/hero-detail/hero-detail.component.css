@@ -1,0 +1,4 @@
+.herodetails { padding: 20px; border: 1px solid #ddd; }
+.herodetails h2 { margin-top: 0; }
+.herodetails div { margin-bottom: 6px; color: #333; }
+.herodetails div img { width: 225px; }

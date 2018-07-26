@@ -1,4 +1,4 @@
-<div *ngIf="hero; else other_content">
+<div *ngIf="hero; else othercontent" class="herodetails">
   <h2>{{ hero.name | uppercase }} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
   <div>
@@ -6,11 +6,13 @@
       <input [(ngModel)]="hero.name" placeholder="name">
     </label>
   </div>
+  <div><span>Price per hour: </span>{{hero.price}}</div>
+  <div><img src="{{hero.img}}" alt=""></div>
 </div>
 
-<ng-template #other_content>
+<ng-template #othercontent>
   <h4 class="none">Select a hero</h4>
 </ng-template>
 
-
+<a href="javascript:void(0);" (click)="goBack()">go back</a>
 
